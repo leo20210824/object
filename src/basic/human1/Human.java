@@ -1,6 +1,5 @@
 package basic.human1;
 
-//データとしてのクラス宣言
 class Human {
     //フィールドの宣言
     private String name;
@@ -10,6 +9,12 @@ class Human {
     public Human(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    //コンストラクタのオーバーロード
+    public Human(Human human) {
+        this.name = human.name;
+        this.age = human.age;
     }
 
     //アクセサ（ゲッター）
