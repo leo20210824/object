@@ -1,0 +1,15 @@
+package basic.human4;
+
+//継承（スーパークラス）
+class Human {
+    //フィールド
+    protected String name;
+
+    public Human(String name) {
+        this.name = name;
+    }
+
+    public void sayHello() {
+        System.out.println("Hello.I'm " + name + ".");
+    }
+}

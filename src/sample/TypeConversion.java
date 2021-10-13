@@ -1,5 +1,6 @@
-package basic.sample;
+package sample;
 
+//型変換の見本
 public class TypeConversion {
     public static void main(String[] args) {
         //数値→文字
@@ -10,9 +11,7 @@ public class TypeConversion {
         String number ="12.34";
         double d2 = Double.parseDouble(number);
         Double d3 = Double.valueOf(number);
-
-        }
     }
-
+}
 
 
