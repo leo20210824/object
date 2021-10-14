@@ -1,6 +1,8 @@
 package ex.student1;
 
 
+
+
 class StudentSample {
     public static void main(String[] args) {
 
