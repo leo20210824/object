@@ -4,8 +4,8 @@ import java.util.Objects;
 
 //従業員クラス
  class Enployee2 {
-     private int id;
-     private  String name;
+    private int id;
+    private String name;
 
     public Enployee2(int id, String name) {
         this.id = id;
@@ -24,8 +24,8 @@ import java.util.Objects;
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Enployee2 enployee = (Enployee2) o;
-        return id == enployee.id && Objects.equals(name, enployee.name);
+        Enployee2 enployee2 = (Enployee2) o;
+        return id == enployee2.id && Objects.equals(name, enployee2.name);
     }
 
     @Override
