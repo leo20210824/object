@@ -3,7 +3,7 @@ package ex.person2;
 import sample.enumsample.Gender;
 
 class Person {
- private String group;
+
  private String name;
  private Birthplace birthplace;
  private Gender gender;
@@ -14,10 +14,7 @@ class Person {
   this.birthplace = birthplace;
   this.gender = gender;
   this.age = age;
-  this.group = group;
- }
- public String getGroup() {
-  return group;
+
  }
 
 
