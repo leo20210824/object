@@ -25,9 +25,13 @@ class Student {
 
     @Override
     public String toString() {
-        return String.format("%s %s %d %d %d %d%.2f"
+        return String.format("%s %s %d %d %d %d %.2f"
                 , name, gender, jap, math, eng, sum(), ave());
     }
+        public String getName() {
+            return name;
+        }
+
 }
 
 
