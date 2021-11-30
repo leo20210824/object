@@ -1,24 +1,24 @@
 package ex.inventory;
 //PC情報
 public class PersonalComputer {
-    private String name;
+    private String userName;
     private int pcNo;
     private int storageNo;
-    private int memory;
+    private int price;
     private int bit;
     private String os;
 
-    public PersonalComputer(String name, int pcNo, int storageNo, int memory, int bit, String os) {
-        this.name = name;
+    public PersonalComputer(String userName, int pcNo, int storageNo, int price, int bit, String os) {
+        this.userName = userName;
         this.pcNo = pcNo;
         this.storageNo = storageNo;
-        this.memory = memory;
+        this.price = price;
         this.bit = bit;
         this.os = os;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
     public int getPcNo() {
@@ -29,8 +29,8 @@ public class PersonalComputer {
         return storageNo;
     }
 
-    public int getMemory() {
-        return memory;
+    public int getPrice() {
+        return price;
     }
 
     public int getBit() {
@@ -41,8 +41,5 @@ public class PersonalComputer {
         return os;
     }
 
-    @Override
-    public String toString() {
-        return String.format("%s %i %i %i %i %s",name,pcNo,storageNo,memory,bit,os);
-    }
+
 }
