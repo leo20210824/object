@@ -3,6 +3,7 @@ package basic.human1;
 //参照型のサンプル
 class ReferenceSample {
     public static void main(String[] args) {
+        //データ更新のサンプル
         Human human1 = new Human("Tom",28);
         Human human2 = human1;
         Human human3 = new Human(human1);
