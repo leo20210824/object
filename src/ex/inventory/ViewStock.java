@@ -58,9 +58,44 @@ public class ViewStock {
 
         // osMapの中身を表示
         System.out.println("// osMapの中身チェック");
-        for (Map.Entry entry : osMap.entrySet()) {
+        for (Map.Entry entry : osMap.entrySet()) {//キー+val=entry まとめた事をentry set(setと書いてるものは重複できない)
             System.out.println("倉庫番号" + entry.getKey() + ":");
             System.out.println("OS:" + entry.getValue());
+
+            //倉庫ごとのPC合計金額計算
+            System.out.println("//倉庫ごとの合計金額");
+            for (Map.Entry entry1: storagePriceMap.entrySet()){
+                double sum = 0;//合計を入れる変数を定義
+                for (Integer i :(List<Integer>) entry1.getValue()){
+                    sum += i;
+                }
+                System.out.println("倉庫番号" + entry1.getKey() + ":");
+                System.out.println("合計金額" + sum + "円");
+            }
+            //合計台数を表示
+            System.out.println("//倉庫ごとの合計台数");
+            for (Map.Entry entry2 : storagePriceMap.entrySet()){
+                int cnt = ((List)entry2.getValue()).size();
+                System.out.println("倉庫番号" + entry2.getKey() + ":");
+                System.out.println("合計台数" + cnt + "台");
+            }
+            //倉庫別に１台ごとの平均金額を表示
+            System.out.println("//倉庫内の１台ごとの平均金額");
+            for (Map.Entry entry3: storagePriceMap.entrySet()){
+                double sum = 0;//合計を入れる変数を定義
+                for (Integer i :(List<Integer>) entry3.getValue()){
+
+                    //合計を出す
+                    sum += i;
+                }
+                //数を数える
+                int cnt = ((List)entry3.getValue()).size();//外側で変数定義//arryListはListより狭い意味合い
+                double ave = sum/cnt;
+                System.out.println("倉庫番号" + entry3.getKey() + ":");
+                System.out.println("平均金額" + ave + "円/台");
+            }
+
+
         }
     }
 }
